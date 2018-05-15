@@ -1,0 +1,13 @@
+<a href ="/write">
+    <button>글쓰러 가기</button>
+</a><br>
+
+<% @every_post.each do |p| %>
+    <br>게시글번호 : <%= p.id %>
+    <br>제목 : <%= p.title %>
+    <br>내용  : <%= p.content %>
+    <br>등록일 : <%= p.created_at %>
+    <br><%=link_to "[삭제]", destroy_path(p) %>
+    <%=link_to "[수정]", update_path(p) %>
+    <hr>
+<% end %>

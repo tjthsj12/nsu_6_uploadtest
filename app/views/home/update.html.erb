@@ -1,0 +1,7 @@
+<h1>여기는 수정하는 곳입니다.</h1>
+
+<form action="/update_result/<%= @update_post.id %>" method="POST">  
+    <br>제목 : <input type="text" name="title" value="<%= @update_post.title %>">
+    <br>내용 : <input type="text" name="content" value="<%= @update_post.content %>">
+    <br><br><input type="submit" value="수정하기">
+</form>
